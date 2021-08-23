@@ -3,16 +3,20 @@ import "./styles.css";
 
 const bookData = {
   Literature: [
-    { name: "a", rating: "3/5" },
-    { name: "b", rating: "5/5" },
-    { name: "c", rating: "4/5" },
-    { name: "d", rating: "4/5" }
+    { name: "The Great Gatsby", author: " F. Scott Fitzgerald", rating: "3/5" },
+    {
+      name: "The Picture of Dorian Gray",
+      author: "Oscar Wilde",
+      rating: "5/5"
+    },
+    { name: "Wuthering Heights", author: "Emily Brontë", rating: "4/5" },
+    { name: "1984", author: "George Orwell", rating: "4/5" }
   ],
-  Friction: [
-    { name: "1", rating: "3/5" },
-    { name: "2", rating: "3/5" },
-    { name: "3", rating: "4/5" },
-    { name: "4 ", rating: "5/5" }
+  Fiction: [
+    { name: "Breasts and Eggs", author: "Mieko Kawakami", rating: "3/5" },
+    { name: "The Mirror & the Light", author: "Hilary Mantel", rating: "3/5" },
+    { name: "Shuggie Bain", author: "Douglas Stuart", rating: "4/5" },
+    { name: "The Vanishing Half", author: "Brit Bennett", rating: "5/5" }
   ]
 };
 
@@ -46,6 +50,7 @@ export default function App() {
               key={val.name}
             >
               <div>{val.name}</div>
+              <div>{val.author}</div>
               <div>{val.rating}</div>
             </li>
           </div>
