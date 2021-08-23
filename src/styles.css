@@ -1,4 +1,45 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  min-height: 100vh;
+  max-height: max-content;
+  background-image: linear-gradient(to left, #bdc3cb, skyblue);
+}
+* {
+  margin: 0;
+}
+section {
+  margin: auto;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+p {
+  margin: 1rem;
+}
+.block {
+  background-color: #ede7dc;
+  background-image: linear-gradient(to left, skyblue, #c3e0e5);
+  margin: auto;
+  border-radius: 1rem;
+  width: 50%;
+  height: max-content;
+}
+.list {
+  padding: 2rem;
+}
+button {
+  border: 1px solid skyblue;
+  background-color: rgb(202, 240, 255);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 2rem;
+}
+button:hover {
+  background-color: aliceblue;
+}
+@media (max-width: 450px) {
+  .block {
+    width: 100%;
+  }
 }

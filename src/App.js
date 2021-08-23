@@ -7,17 +7,17 @@ const bookData = {
     {
       name: "The Picture of Dorian Gray",
       author: "Oscar Wilde",
-      rating: "5/5"
+      rating: "5/5",
     },
     { name: "Wuthering Heights", author: "Emily Brontë", rating: "4/5" },
-    { name: "1984", author: "George Orwell", rating: "4/5" }
+    { name: "1984", author: "George Orwell", rating: "4/5" },
   ],
   Fiction: [
     { name: "Breasts and Eggs", author: "Mieko Kawakami", rating: "3/5" },
     { name: "The Mirror & the Light", author: "Hilary Mantel", rating: "3/5" },
     { name: "Shuggie Bain", author: "Douglas Stuart", rating: "4/5" },
-    { name: "The Vanishing Half", author: "Brit Bennett", rating: "5/5" }
-  ]
+    { name: "The Vanishing Half", author: "Brit Bennett", rating: "5/5" },
+  ],
 };
 
 var bookList = Object.keys(bookData);
@@ -30,28 +30,34 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <h3>
-        Hey there do you love reading books? Checkout some amazing books
-        according to genre.
-      </h3>
+    <div className='App'>
+      <section>
+        <h1>Hey there do you love reading books?</h1>
+        <p>Checkout some amazing books according to genre.</p>
+      </section>
+
       {bookList.map((book) => {
         return <button onClick={() => clickHandler(book)}>{book}</button>;
       })}
       {ListOfBooks.map((val) => {
         return (
-          <div>
+          <div className='block'>
             <li
+              className='list'
               style={{
                 display: "flex",
                 textAlign: "center",
-                padding: ".1rem 1rem"
+                margin: ".5rem",
               }}
-              key={val.name}
-            >
-              <div>{val.name}</div>
-              <div>{val.author}</div>
-              <div>{val.rating}</div>
+              key={val.name}>
+              <div style={{ width: "80%" }}>
+                <div style={{ margin: "1rem" }}>
+                  <h3>{val.name}</h3>
+                </div>
+                <div style={{ margin: "1rem" }}>{val.author}</div>
+              </div>
+
+              <div style={{ margin: "1rem" }}>{val.rating}</div>
             </li>
           </div>
         );
